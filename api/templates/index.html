@@ -5,7 +5,7 @@
     <style>
         /* Style for banner and footer */
         .banner, .footer {
-            background-color: #2C3E50;
+            background-color: #063970; /* Updated color for banner and footer */
             color: #ECF0F1;
             padding: 20px 0;
             text-align: center;
@@ -25,8 +25,19 @@
         }
 
         /* Style for form elements */
-        label, input, select, fieldset {
+        label, input, select {
             margin-bottom: 10px;
+        }
+
+        /* Turquoise color for certain elements */
+        h2, fieldset legend {
+            color: turquoise;
+        }
+
+        /* Box outlining for radio button group */
+        fieldset {
+            border: 2px solid turquoise;
+            padding: 10px;
         }
 
         /* Image styling */
@@ -36,6 +47,19 @@
             display: block;
             margin: 20px auto;
         }
+
+        /* Style for footer links */
+        footer a {
+            color: #ECF0F1;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #3498DB;
+        }
+
     </style>
 </head>
 
@@ -94,9 +118,5 @@
 
     <!-- Footer at the bottom -->
     <div class="footer">
-        <p>&copy; 2023 Ankur & James (Some) rights reserved</p>
-    </div>
-
-</body>
-
-</html>
+        <footer>
+            <a href="https
