@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+<body>
+    <p>
+        Welcome!
+    </p>
+<h2>What would you like for lunch?</h2>
+    <ol>
+        <li>Fish and Chips</li>
+        <li>Chicken curry</li>
+        <li>Vegetable pasta</li>
+    </ol>
+    <form action = "/submit" method="post">
+        <label for = "namefield">Name:</label>
+        <input type ="text" id = "namefield" name="name" placeholder="Enter name here">
+    <p>
+        <label for = "yearfield">Year:</label>
+        <input type ="number" min="1" max="4" id = "yearfield" name="year" placeholder="1">
+    </p>        
+    <p>
+        <label for = "menuoption">Meal choice: </label>
+        <select name = "menu" id = "menuoption">
+            <option value="Fish and Chips">Fish and Chips</option>
+            <option value="Chicken Curry">Chicken Curry</option>
+            <option value="Vegetarian Pasta">Vegetarian Pasta</option>
+        </select>
+    </p>
+    <fieldset>
+        <legend>Number of additional guests</legend>
+        <div>
+            <input type="radio" id = "Zero" value = "Zero" name="guests" checked>
+            <label for="Zero">0</label>
+        </div>
+        <div>
+            <input type="radio" id = "One" value = "One" name="guests">
+            <label for="One">1</label>
+        </div>
+        <div>
+            <input type="radio" id = "Two" value = "Two" name="guests">
+            <label for="Two">2</label>
+        </div>
+    </fieldset>
+    
+
+    <p>
+        <input type="submit" value="submit">
+    </p>
+    <img src="media/spencer-davis-vJsj-hgOEG0-unsplash.jpg" alt="Picture of a table of food"/>
+    </form>
+</body>
+</html>
