@@ -1,52 +1,102 @@
+<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-    <p>
-        Welcome!
-    </p>
-<h2>What would you like for lunch?</h2>
-    <ol>
-        <li>Fish and Chips</li>
-        <li>Chicken curry</li>
-        <li>Vegetable pasta</li>
-    </ol>
-    <form action = "/submit" method="post">
-        <label for = "namefield">Name:</label>
-        <input type ="text" id = "namefield" name="name" placeholder="Enter name here">
-    <p>
-        <label for = "yearfield">Year:</label>
-        <input type ="number" min="1" max="4" id = "yearfield" name="year" placeholder="1">
-    </p>        
-    <p>
-        <label for = "menuoption">Meal choice: </label>
-        <select name = "menu" id = "menuoption">
-            <option value="Fish and Chips">Fish and Chips</option>
-            <option value="Chicken Curry">Chicken Curry</option>
-            <option value="Vegetarian Pasta">Vegetarian Pasta</option>
-        </select>
-    </p>
-    <fieldset>
-        <legend>Number of additional guests</legend>
-        <div>
-            <input type="radio" id = "Zero" value = "Zero" name="guests" checked>
-            <label for="Zero">0</label>
-        </div>
-        <div>
-            <input type="radio" id = "One" value = "One" name="guests">
-            <label for="One">1</label>
-        </div>
-        <div>
-            <input type="radio" id = "Two" value = "Two" name="guests">
-            <label for="Two">2</label>
-        </div>
-    </fieldset>
-    
 
-    <p>
-        <input type="submit" value="submit">
-    </p>
-    </form>
-    <img src="https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Picture of a table of food"/> 
+<head>
+    <style>
+        /* Style for banner and footer */
+        .banner, .footer {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Main body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Margin for main content */
+        .content {
+            margin: 20px;
+        }
+
+        /* Style for form elements */
+        label, input, select, fieldset {
+            margin-bottom: 10px;
+        }
+
+        /* Image styling */
+        img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Banner at the top -->
+    <div class="banner">
+        <h1>Welcome to the Lunch Selector</h1>
+    </div>
+
+    <div class="content">
+        <p>Welcome!</p>
+        <h2>What would you like for lunch?</h2>
+        <ol>
+            <li>Fish and Chips</li>
+            <li>Chicken curry</li>
+            <li>Vegetable pasta</li>
+        </ol>
+        <form action="/submit" method="post">
+            <label for="namefield">Name:</label>
+            <input type="text" id="namefield" name="name" placeholder="Enter name here">
+            <p>
+                <label for="yearfield">Year:</label>
+                <input type="number" min="1" max="4" id="yearfield" name="year" placeholder="1">
+            </p>
+            <p>
+                <label for="menuoption">Meal choice: </label>
+                <select name="menu" id="menuoption">
+                    <option value="Fish and Chips">Fish and Chips</option>
+                    <option value="Chicken Curry">Chicken Curry</option>
+                    <option value="Vegetarian Pasta">Vegetarian Pasta</option>
+                </select>
+            </p>
+            <fieldset>
+                <legend>Number of additional guests</legend>
+                <div>
+                    <input type="radio" id="Zero" value="Zero" name="guests" checked>
+                    <label for="Zero">0</label>
+                </div>
+                <div>
+                    <input type="radio" id="One" value="One" name="guests">
+                    <label for="One">1</label>
+                </div>
+                <div>
+                    <input type="radio" id="Two" value="Two" name="guests">
+                    <label for="Two">2</label>
+                </div>
+            </fieldset>
+
+            <p>
+                <input type="submit" value="submit">
+            </p>
+        </form>
+        <img src="https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Picture of a table of food">
+    </div>
+
+    <!-- Footer at the bottom -->
+    <div class="footer">
+        <p>&copy; 2023 Ankur & James (Some) rights reserved</p>
+    </div>
+
 </body>
+
 </html>
