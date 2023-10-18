@@ -1,6 +1,30 @@
+Mozilla Developer Network:
 <input type="radio">;
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
 [Accessed 16 October 2023]
+
+<button>: The Button element;
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
+[Accessed 18 October 2023]
+
+Styling web forms;
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms
+[Accessed 18 October 2023]
+
+<input type="submit">;
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit
+[Accessed 18 October 2023]
+
+<input type="number">
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+[Accessed 18 October 2023]
+
+<input>: The Input (Form Input) element;
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+[Accessed 18 October]
+
+pythonhow; Adding CSS styling to your website; 
+https://pythonhow.com/python-tutorial/flask/Adding-CSS-styling-to-your-website/ [Accessed 18 October 2023]
 
 Unsplash. https://unsplash.com/photos/vJsj-hgOEG0;  Photo credit: Spencer Davis. [Accessed 16 October 2023]
 Photo by <a href="https://unsplash.com/@spencerdavis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Spencer Davis</a> on <a href="https://unsplash.com/photos/vJsj-hgOEG0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
@@ -9,4 +33,7 @@ Wikipedia. https://commons.wikimedia.org/wiki/File:Chicken_preparation_in_Malvan
 
 Wikipedia. https://commons.wikimedia.org/wiki/File:Fish_and_chips_blackpool.jpg; Matthias Meckel. [Accessed 16 October 2023, no changes made]
 
-Wikipedia. https://en.wikipedia.org/wiki/Pasta_primavera#/media/File:Pasta_primavera.jpg; Jeremy Keith. [Accessed 16 October 2023, no changes made]
+Wikipedia. https://en.wikipedia.org/wiki/Pasta_primavera#/media/File:Pasta_primavera.jpg;
+Jeremy Keith. [Accessed 16 October 2023, no changes made]
+
+
