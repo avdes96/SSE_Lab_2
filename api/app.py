@@ -12,4 +12,4 @@ def submit():
     input_year = request.form.get("year")
     input_guests = request.form.get("guests")
     input_donation = request.form.get("donation")
-    return render_template("hello.html", name=input_name, menu=input_menu, year = input_year, guests = input_guests, donation = input_donation)
+    return render_template("form_submit_page.html", name=input_name, menu=input_menu, year = input_year, guests = input_guests, donation = input_donation)
