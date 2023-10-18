@@ -1,3 +1,22 @@
+#submit_button, select {
+    cursor: pointer;
+    background-color: #063970;
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+}
+
+#submit_button {
+    height: 50px;
+    width: 100px;
+    font-size: medium;
+}
+
+#submit_button:hover {
+    color: turquoise;
+    
+}
+
 /* Style for banner and footer */
 .banner, .footer {
     background-color: #063970;
@@ -29,7 +48,17 @@ h2, fieldset legend {
     color: turquoise;
 }
 
-/* Box outlining for radio button group */
+/* Box outlining for radio bubutton {
+    cursor: pointer;
+    background-color: #063970;
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+}
+
+button:hover {
+transform: translateY(2px);
+}tton group */
 fieldset {
     border: 2px solid turquoise;
     padding: 10px;
@@ -64,3 +93,4 @@ footer a:hover {
     max-width: 200px;
     height: auto;
 }
+
