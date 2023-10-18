@@ -5,7 +5,7 @@
     <style>
         /* Style for banner and footer */
         .banner, .footer {
-            background-color: #063970; /* Updated color for banner and footer */
+            background-color: #063970;
             color: #ECF0F1;
             padding: 20px 0;
             text-align: center;
@@ -40,14 +40,6 @@
             padding: 10px;
         }
 
-        /* Image styling */
-        img {
-            width: 100%;
-            max-width: 600px;
-            display: block;
-            margin: 20px auto;
-        }
-
         /* Style for footer links */
         footer a {
             color: #ECF0F1;
@@ -60,6 +52,23 @@
             color: #3498DB;
         }
 
+        /* New styles for food images */
+        .food-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .food-item {
+            width: 30%;
+            text-align: center;
+        }
+
+        .food-item img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -72,11 +81,26 @@
     <div class="content">
         <p>Welcome!</p>
         <h2>What would you like for lunch?</h2>
-        <ol>
-            <li>Fish and Chips</li>
-            <li>Chicken curry</li>
-            <li>Vegetable pasta</li>
-        </ol>
+
+        <!-- Food images, captions, and sources -->
+        <div class="food-section">
+            <div class="food-item">
+                <figcaption>Fish and Chips</figcaption>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/1024px-Fish_and_chips_blackpool.jpg" alt="Fish and Chips">
+                <p>Source: <a href="https://commons.wikimedia.org/wiki/File:Fish_and_chips_blackpool.jpg" target="_blank">Wikipedia</a></p>
+            </div>
+            <div class="food-item">
+                <figcaption>Chicken Curry</figcaption>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Chicken_preparation_in_Malvani_style.jpg/220px-Chicken_preparation_in_Malvani_style.jpg" alt="Chicken Curry">
+                <p>Source: <a href="https://commons.wikimedia.org/wiki/File:Chicken_preparation_in_Malvani_style.jpg" target="_blank">Wikipedia</a></p>
+            </div>
+            <div class="food-item">
+                <figcaption>Vegetarian Pasta</figcaption>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Pasta_primavera.jpg/1024px-Pasta_primavera.jpg" alt="Vegetarian Pasta">
+                <p>Source: <a href="https://commons.wikimedia.org/wiki/File:Pasta_primavera.jpg" target="_blank">Wikipedia</a></p>
+            </div>
+        </div>
+
         <form action="/submit" method="post">
             <label for="namefield">Name:</label>
             <input type="text" id="namefield" name="name" placeholder="Enter name here">
@@ -107,16 +131,17 @@
                     <label for="Two">2</label>
                 </div>
             </fieldset>
-
             <p>
                 <input type="submit" value="submit">
             </p>
         </form>
-        <img src="https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="Picture of a table of food">
     </div>
 
     <!-- Footer at the bottom -->
     <div class="footer">
         <footer>
-            <a href="https
+            <a href="https://github.com/avdes96/SSE_Lab_2">Visit GitHub Project</a>
+        </footer>
+    </div>
+</body>
+</html>
