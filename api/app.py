@@ -23,3 +23,9 @@ def submit():
         guests=input_guests,
         donation=input_donation,
     )
+
+def process_query(entity):
+    if entity == "dinosaurs":
+        return "Dinosaurs ruled the Earth 200 million years ago"
+    elif entity == "asteroids":
+        return "Unknown"
