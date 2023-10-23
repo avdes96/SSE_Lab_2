@@ -31,7 +31,7 @@ jobs:
       run: pytest api/*.py
 
   deploy-to-vercel:
-    needs: python-formatting, unit-formatting
+    needs: unit-formatting
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
