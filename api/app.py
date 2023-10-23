@@ -24,6 +24,7 @@ def submit():
         donation=input_donation,
     )
 
+
 def process_query(entity):
     if entity == "dinosaurs":
         return "Dinosaurs ruled the Earth 200 million years ago"
