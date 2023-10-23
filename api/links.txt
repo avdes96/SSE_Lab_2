@@ -36,4 +36,7 @@ Wikipedia. https://commons.wikimedia.org/wiki/File:Fish_and_chips_blackpool.jpg;
 Wikipedia. https://en.wikipedia.org/wiki/Pasta_primavera#/media/File:Pasta_primavera.jpg;
 Jeremy Keith. [Accessed 16 October 2023, no changes made]
 
+StackOverflow. How do you access the query string in Flask routes? https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
+[Accessed 23 October 2023]
+
 
