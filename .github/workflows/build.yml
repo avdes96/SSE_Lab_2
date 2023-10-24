@@ -14,6 +14,10 @@ jobs:
       run: pip install flake8
     - name: Run flake8
       run: flake8 api/
+    - name: Install black
+      run: Install black
+    - name: Run black
+      run: black api/*.py --check
 
   type-checking:
     needs: python-formatting
