@@ -30,6 +30,7 @@ def process_query(entity: str) -> str:
         return "Dinosaurs ruled the Earth 200 million years ago"
     elif entity == "asteroids":
         return "Unknown"
+    return "Please query for dinosaurs or asteroids!"
 
 
 @app.route("/query", methods=["GET"])
