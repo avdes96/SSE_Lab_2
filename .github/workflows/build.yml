@@ -11,7 +11,7 @@ jobs:
       with:
         python-version: 3.9
     - name: Install black
-      run: Install black
+      run: pip install black
     - name: Run black
       run: black api/*.py --check
     - name: Install flake8
