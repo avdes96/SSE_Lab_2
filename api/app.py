@@ -36,4 +36,5 @@ def process_query(entity: str) -> str:
 @app.route("/query", methods=["GET"])
 def query():
     q = request.args.get("q")
-    return process_query(q)
+    info = process_query(q)
+    return render_template("query_results.html", entity=q, info=info)

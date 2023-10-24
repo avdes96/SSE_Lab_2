@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Dinosaur Facts</title>
+</head>
+<body class="dino-background">
+    <div class="dino-banner">
+        <h1>Dinosaur Facts</h1>
+    </div>
+    <div class="dino-content">
+        <img src="{{ url_for('static', filename='images/fausto-garcia-menendez-hYKG311mff8-unsplash.jpg') }}" alt="Fun Dinosaur Image" class="dino-image">
+        <p>{{ info }}</p>
+    </div>
+    <div class="dino-footer">
+        <p>Want to learn more? Ask another question!</p>
+    </div>
+</body>
+</html>
