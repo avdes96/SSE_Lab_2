@@ -10,14 +10,14 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: 3.9
-    - name: Install flake8
-      run: pip install flake8
-    - name: Run flake8
-      run: flake8 api/
     - name: Install black
       run: Install black
     - name: Run black
       run: black api/*.py --check
+    - name: Install flake8
+      run: pip install flake8
+    - name: Run flake8
+      run: flake8 api/
 
   type-checking:
     needs: python-formatting
