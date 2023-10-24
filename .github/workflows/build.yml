@@ -44,10 +44,12 @@ jobs:
         python-version: 3.9
     - name: Install pytest
       run: pip install pytest
+    - name: Install pytest-cov
+      run: pip install pytest-cov
     - name: Install flask
       run: pip install flask
-    - name: Run pytest
-      run: pytest api/*.py
+    - name: Run pytest with coverage
+      run: pytest api/*.py  --cov=api
 
   deploy-to-vercel:
     needs: unit-testing
