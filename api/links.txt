@@ -39,11 +39,4 @@ Jeremy Keith. [Accessed 16 October 2023, no changes made]
 StackOverflow. How do you access the query string in Flask routes? https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
 [Accessed 23 October 2023]
 
-Real Python. Python Type Checking
-(Guide). https://realpython.com/python-type-checking/ [Accessed 24
-October 2023]
-
-mypy. mypy 1.6.1 documentation. Running mypy and managing imports [Accessed 24
-October 2023]
-
 
