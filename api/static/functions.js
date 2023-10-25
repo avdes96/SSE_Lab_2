@@ -19,3 +19,22 @@ function random_dino_fact() {
     document.getElementById("fact").textContent = output;
 
 }
+
+function random_asteroid_fact() {
+    num = (num + 1) % 9
+    var dict = {
+        0 : "Asteroids are minor planets!",
+        1 : "There are about 1 million known asteroids!",
+        2 : "Asteroids are mainly located in the asteroid belt!",
+        3 : "Ceres is the largest asteroid!",
+        4 : "The asteroid 4 Vesta is the only one visible to the naked eye!",
+        5 : "Asteroid mining may be possible in the future!",
+        6 : "The combined mass of all asteroids is equal to about 3% of the moon!",
+        7 : "The Chicxulub crater in Mexico was caused by an asteroid impact!",
+        8 : "The 30th June is International Asteroid Day!",
+    }
+
+    let output = dict[num]
+    document.getElementById("fact").textContent = output;
+
+}

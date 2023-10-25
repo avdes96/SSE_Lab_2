@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asteroid Facts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css')}}">
+    <script src="{{url_for('static', filename='functions.js')}}"></script>
+</head>
+<body onload="random_asteroid_fact()">
+    <div class="banner">
+        <h1>You found the secret asteroid fact generator!</h1>
+    </div>
+    <div id="fact-content">
+        <img id = "fact-image" src="{{ url_for('static', filename='/images/javier-miranda-SYRNx7SLHCk-unsplash.jpg')}}" alt="Fun Dinosaur Image" class="dino-image">
+        <h3>Here is a fact about asteroids!</h3>
+        <p id = "fact"></p>
+        <div>
+        <button onclick="random_asteroid_fact()">Show me a new fact!</button>
+        </div>
+        <div>
+        <a href="https://en.wikipedia.org/wiki/Asteroid" id = "citation">Facts generated from Asteroid Wikipedia page</a>
+    </div>
+    </div>
+</body>
+</html>
