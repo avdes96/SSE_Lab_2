@@ -37,4 +37,9 @@ def process_query(entity: str) -> str:
 def query():
     q = request.args.get("q")
     info = process_query(q)
-    return render_template("dinosaurs.html", entity=q, info=info)
+    if q == "dinosaurs":
+        return render_template("dinosaurs.html", entity=q, info=info)
+    elif q == "asteroids":
+        return render_template("asteroids.html", entity=q, info=info)
+    else:
+        return render_template("other.html", entity=q, info=info)
