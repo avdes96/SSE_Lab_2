@@ -42,4 +42,4 @@ def query():
     elif q == "asteroids":
         return render_template("asteroids.html", entity=q, info=info)
     else:
-        return render_template("other.html", entity=q, info=info)
+        return render_template("others.html", entity=q, info=info)
