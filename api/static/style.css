@@ -1,4 +1,4 @@
-#submit_button, select {
+#submit_button, select, button {
     cursor: pointer;
     background-color: #063970;
     color: white;
@@ -12,7 +12,13 @@
     font-size: medium;
 }
 
-#submit_button:hover {
+button {
+    height: 50px;
+    width: 200px;
+    font-size: medium;
+}
+
+#submit_button:hover, button:hover {
     color: turquoise;
     
 }
@@ -94,3 +100,21 @@ footer a:hover {
     height: auto;
 }
 
+#fact {
+    width: 50%;
+    font: 400;
+    border: #063970 2px;
+}
+
+#fact-image {
+ width: 20%;
+ margin-top: 30px;
+}
+
+#fact-content {
+    text-align: center;
+}
+
+#fact {
+    margin: 10px auto;
+}
