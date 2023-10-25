@@ -23,6 +23,19 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
 [Accessed 18 October]
 
+Functions. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+[Accessed 25 October 2023]
+
+<div>: The Content Division
+element. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div. [Accessed
+25 October 2023]
+
+margin. https://developer.mozilla.org/en-US/docs/Web/CSS/margin [Accessed
+25 October 2023]
+
+Node: textContent
+property. https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent [Accessed 25 October 2023]
+
 pythonhow; Adding CSS styling to your website; 
 https://pythonhow.com/python-tutorial/flask/Adding-CSS-styling-to-your-website/ [Accessed 18 October 2023]
 
@@ -53,5 +66,68 @@ Black. Black 23.10.1 documentation. Using Black with other
 tools. https://black.readthedocs.io/en/stable/guides/using_black_with_other_tools.html [Accessed 25 October 2023]
 
 Stack Overflow. Per-project flake8 max line length?
-https://stackoverflow.com/questions/42325453/per-project-flake8-max-line-length [Accessed 25 October 2023]
+https://stackoverflow.com/questions/42325453/per-project-flake8-max-line-length
+[Accessed 25 October 2023]
 
+Stack Overflow. Using an HTML button to call a JavaScript
+function. https://stackoverflow.com/questions/1947263/using-an-html-button-to-call-a-javascript-function
+[Accessed 25 October 2023]
+
+Stack Overflow. Flask Application - How to link a javascript file to
+website. https://stackoverflow.com/questions/30011170/flask-application-how-to-link-a-javascript-file-to-website
+[Accessed 25 October 2023]
+
+Stack Overflow. Generate random number between two numbers in JavaScript .https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+[Accessed 25 October 2023]
+
+Stack Overflow. HTML img scaling. https://stackoverflow.com/questions/1347675/html-img-scaling
+[Accessed 25 October 2023]
+
+Stack Overflow. My div won't center HTML CSS.https://stackoverflow.com/questions/30578057/my-div-wont-center-html-css
+[Accessed 25 October 2023]
+
+Stack Overflow. How do I change the value of a global variable inside
+of a function. https://stackoverflow.com/questions/10872006/how-do-i-change-the-value-of-a-global-variable-inside-of-a-function
+[Accessed 25 October 2023]
+
+Stack Overflow. How do I call a JavaScript function on page load?.https://stackoverflow.com/questions/3842614/how-do-i-call-a-javascript-function-on-page-load
+[Accessed 25 October 2023]
+
+Chris Pietschmann. JavaScript Basics: How to create a Dictionary with
+Key/Value
+pairs. https://pietschsoft.com/post/2015/09/05/javascript-basics-how-to-create-a-dictionary-with-keyvalue-pairs
+[Accessed 25 October 2023]
+
+FreeCodeCamp. How to Make Your Websites More
+Interactive. https://www.freecodecamp.org/news/manipulate-html-and-css-using-javascript/
+[Accessed 25 October 2023]
+
+FreeCodeCamp. Var, Let, and Const – What's the Difference? https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/
+[Accessed 25 October 2023]
+
+FreeCodeCamp. How to Center Anything with CSS - Align a Div, Text, and
+More. https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/
+[Accessed 25 October 2023]
+
+Unsplash. https://unsplash.com/photos/brown-dinosaur-illustration-hYKG311mff8
+Photo Credit: Fausto García-Menéndez [Accessed 25 October 2023]
+Photo by <a
+href="https://unsplash.com/@faustogarmen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fausto
+García-Menéndez</a> on <a
+href="https://unsplash.com/photos/brown-dinosaur-illustration-hYKG311mff8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+Unsplash. https://unsplash.com/photos/an-artists-rendering-of-a-space-ship-approaching-a-planet-SYRNx7SLHCk
+Photo Credit: Javier Miranda [Accessed 25 October 2023]
+Photo by <a
+href="https://unsplash.com/@nuvaproductions?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Javier
+Miranda</a> on <a
+href="https://unsplash.com/photos/an-artists-rendering-of-a-space-ship-approaching-a-planet-SYRNx7SLHCk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+Unsplash. https://unsplash.com/photos/blue-lego-minifig-on-white-surface-fDaUCTp28dA
+Photo Credit: Nik [Accessed 25 October 2023]
+Photo by <a href="https://unsplash.com/@helloimnik?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nik</a> on <a href="https://unsplash.com/photos/blue-lego-minifig-on-white-surface-fDaUCTp28dA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+Wikipedia. Dinosaur.  https://en.wikipedia.org/wiki/Dinosaur [Accessed
+25 October 2023]
+
+Wikipedia. Asteroid. https://en.wikipedia.org/wiki/Asteroid [Accessed 25 October 2023]
