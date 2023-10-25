@@ -3,6 +3,7 @@
 <head>
     <title>Dinosaur Facts</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/style.css')}}">
+    <script src="{{url_for('static', filename='functions.js')}}"></script>
 </head>
 <body class="dino-background">
     <div class="dino-banner">
@@ -10,9 +11,9 @@
     </div>
     <div class="dino-content">
         <img src="https://images.unsplash.com/photo-1525877442103-5ddb2089b2bb?auto=format&fit=crop&q=80&w=1170&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fun Dinosaur Image" class="dino-image">
-        <p>1. It’s believed that birds we see today have evolved from the most interesting dinosaurs as just like chickens, dinosaurs came from eggs, just bigger ones!</p>
-        <p>2. Some dinosaurs built large nests to keep their babies together. Young dinosaurs grew very fast. Many reached full size in seven or eight years. Speaking of nests, the biggest dinosaur eggs ever found were about 19 inches long, and the smallest were 0.7 inches (smaller than a penny).</p>
-        <p>3. The dinosaur with the longest name was the Micropachycephalosaurus, which means tiny, thick headed lizard!</p>
-    </div>
+        <p id = "fact">Random fact</p>
+        <p>
+        <button onclick="random_fact()">Show me a new fact</button>
+        </p>
 </body>
 </html>

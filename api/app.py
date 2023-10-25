@@ -37,4 +37,4 @@ def process_query(entity: str) -> str:
 def query():
     q = request.args.get("q")
     info = process_query(q)
-    return render_template("query_results.html", entity=q, info=info)
+    return render_template("dinosaurs.html", entity=q, info=info)
