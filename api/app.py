@@ -34,14 +34,8 @@ def process_query(entity: str) -> str:
         return "james_ankur"
     return "Please query for dinosaurs or asteroids!"
 
-
 @app.route("/query", methods=["GET"])
 def query():
     q = request.args.get("q")
     info = process_query(q)
-    if q == "dinosaurs":
-        return render_template("dinosaurs.html", entity=q, info=info)
-    elif q == "asteroids":
-        return render_template("asteroids.html", entity=q, info=info)
-    else:
-        return render_template("others.html", entity=q, info=info)
+    return info
