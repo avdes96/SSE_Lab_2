@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import re
+import math
 
 app = Flask(__name__)
 
@@ -48,6 +49,12 @@ def process_query(entity):
         last_two_numbers = numbers[-2:]
         result = last_two_numbers[0] * last_two_numbers[1]
         return str(result)
+    
+    elif startswith("Which of the following numbers is both a square and a cube:"):
+        numbers = [int(num) for num in re.findall(r'\d+', entity)]
+        for num in numbers:
+            if is_cube(num) and is_square(num):
+                return str(num)
 
     return "Please query for dinosaurs or asteroids!"
 
@@ -56,3 +63,11 @@ def query():
     q = request.args.get("q")
     info = process_query(q)
     return info
+
+def is_cube(number):
+    cube_root = round(number **(1/3))
+    return cube_root ** 3 == number
+
+def is_square(number):
+    sq_root = round(number **(1/2))
+    return sq_root ** 2 == number

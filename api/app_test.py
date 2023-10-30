@@ -23,3 +23,8 @@ def test_largest():
     query = "Which of the following numbers is the largest: 53, 1, 35"
     expected = str(53)
     assert process_query(query) == expected
+
+def test_sq_cube():
+    query = "Which of the following numbers is both a square and a cube: 216, 891, 256, 2201, 1285, 4395, 4096?"
+    expected = str(4096)
+    assert process_query(query) == expected
