@@ -42,3 +42,8 @@ def test_is_prime():
     query = "Which of the following numbers are primes: 2, 4, 6?"
     expected = str(2)
     assert process_query(query) == expected
+
+def test_is_primes():
+    query = "Which of the following numbers are primes: 2, 3, 5, 6?"
+    expected = str("2, 3, 5")
+    assert process_query(query) == expected
