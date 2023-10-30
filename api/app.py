@@ -36,7 +36,7 @@ def process_query(entity):
     elif entity.startswith("Which of the following numbers is the largest"):
         numbers = [int(num) for num in re.findall(r'\d+', entity)]
         last_three_numbers = numbers[-3:]
-        largest = max(last_three_numbers):
+        largest = max(last_three_numbers)
         return str(largest)
     elif "What is" in entity and "plus" in entity:
         numbers = [int(num) for num in re.findall(r'\d+', entity)]
