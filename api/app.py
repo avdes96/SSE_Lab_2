@@ -49,6 +49,11 @@ def process_query(entity):
         last_two_numbers = numbers[-2:]
         result = last_two_numbers[0] * last_two_numbers[1]
         return str(result)
+    elif "What is" in entity and "minus" in entity:
+        numbers = [int(num) for num in re.findall(r"\d+", entity)]
+        last_two_numbers = numbers[-2:]
+        total = result = last_two_numbers[0] - last_two_numbers[1]
+        return str(total)
 
     elif entity.startswith(
         "Which of the following numbers is both a square and a cube:"
