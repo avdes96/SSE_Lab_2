@@ -59,9 +59,12 @@ def process_query(entity):
         "Which of the following numbers is both a square and a cube:"
     ):
         numbers = [int(num) for num in re.findall(r"\d+", entity)]
+        result = ""
         for num in numbers:
             if is_cube(num) and is_square(num):
-                return str(num)
+                result = result + str(num) + ", "
+        return result[:-2]
+
     elif entity.startswith(
         "Which of the following numbers are primes"
     ):
