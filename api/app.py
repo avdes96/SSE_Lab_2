@@ -46,8 +46,8 @@ def process_query(entity):
     elif "What is" in entity and "multiplied" in entity:
         numbers = [int(num) for num in re.findall(r'\d+', entity)]
         last_two_numbers = numbers[-2:]
-        product = product(last_two_numbers)
-        return str(product)
+        result = last_two_numbers[0] * last_two_numbers[1]
+        return str(result)
 
     return "Please query for dinosaurs or asteroids!"
 
