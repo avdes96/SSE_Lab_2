@@ -13,3 +13,13 @@ def test_does_not_know_about_asteroids():
 
 def test_knows_name():
     assert process_query("What is your name?") == "james_ankur"
+
+def test_sum():
+    query = "What is 42 plus 76?"
+    expected = str(118)
+    assert process_query(query) == expected
+
+def test_largest():
+    query = "Which of the following numbers is the largest: 53, 1, 35"
+    expected = str(53)
+    assert process_query(query) == expected
