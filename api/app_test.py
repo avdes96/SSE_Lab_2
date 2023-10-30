@@ -37,3 +37,8 @@ def test_minus():
     query = "What is 60 minus 30?"
     expected = str(30)
     assert process_query(query) == expected
+
+def test_is_prime():
+    query = "Which of the following numbers are primes: 2, 4, 6?"
+    expected = str(2)
+    assert process_query(query) == expected
