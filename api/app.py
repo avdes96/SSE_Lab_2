@@ -30,6 +30,8 @@ def process_query(entity: str) -> str:
         return "Dinosaurs ruled the Earth 200 million years ago"
     elif entity == "asteroids":
         return "Unknown"
+    elif entity == "What is your name?":
+        return "james_ankur"
     return "Please query for dinosaurs or asteroids!"
 
 
