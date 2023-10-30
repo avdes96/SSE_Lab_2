@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, re
 
 app = Flask(__name__)
 
@@ -33,7 +33,7 @@ def process_query(entity):
     elif entity == "What is your name?":
         return "james_ankur"
     elif entity.startswith("Which of the following numbers is the largest"):
-        numbers =[int(num) for num in re.findall(e"\b\d+\b", entity)]
+        numbers = [int(num) for num in re.findall(e"\b\d+\b", entity)]
         last_three_numbers = numbers[-3:]
         largest = max(last_three_numbers)
         return str(largest)
