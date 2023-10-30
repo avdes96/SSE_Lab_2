@@ -28,6 +28,7 @@ def test_largest():
 
 
 def test_sq_cube():
-    query = "Which of the following numbers is both a square and a cube: 216, 891, 256, 2201, 1285, 4395, 4096?"
+    query = "Which of the following numbers is both a square and a cube: 216, \
+    891, 256, 2201, 1285, 4395, 4096?"
     expected = str(4096)
     assert process_query(query) == expected
