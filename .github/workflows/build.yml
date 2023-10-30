@@ -37,7 +37,7 @@ jobs:
   #     run: mypy api/*.py
 
   unit-testing:
-    needs: type-checking
+    needs: python-formatting
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
