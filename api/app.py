@@ -38,10 +38,10 @@ def process_query(entity):
         last_three_numbers = numbers[-3:]
         largest = max(last_three_numbers):
         return str(largest)
-    elif entity.startswith("What is"):
+    elif "What is" in entity and "plus" in entity:
         numbers = [int(num) for num in re.findall(r'\d+', entity)]
         last_two_numbers = numbers[-2:]
-        sum = max(last_two_numbers):
+        sum = sum(last_two_numbers):
         return str(sum)
 
     return "Please query for dinosaurs or asteroids!"
