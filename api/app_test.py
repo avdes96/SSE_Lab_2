@@ -32,3 +32,8 @@ def test_sq_cube():
     891, 256, 2201, 1285, 4395, 4096?"
     expected = str(4096)
     assert process_query(query) == expected
+
+def test_minus():
+    query = "What is 60 minus 30?"
+    expected = str(30)
+    assert process_query(query) == expected
