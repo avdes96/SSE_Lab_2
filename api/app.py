@@ -34,10 +34,11 @@ def process_query(entity):
     elif entity == "What is your name?":
         return "james_ankur"
     elif entity.startswith("Which of the following numbers is the largest"):
-        numbers = [int(num) for num in re.findall(e"\b\d+\b", entity)]
+        numbers = [int(num) for num in re.findall(r'\d+', entity)]
         last_three_numbers = numbers[-3:]
         largest = max(last_three_numbers)
         return str(largest)
+
     return "Please query for dinosaurs or asteroids!"
 
 @app.route("/query", methods=["GET"])
