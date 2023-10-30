@@ -66,9 +66,11 @@ def process_query(entity):
         "Which of the following numbers are primes"
     ):
         numbers = [int(num) for num in re.findall(r"\d+", entity)]
+        result = ""
         for num in numbers:
             if is_prime(num):
-                return str(num)
+                result = result + str(num) + ", "
+        return result[:-2]
 
     return "Please query for dinosaurs or asteroids!"
 
@@ -93,9 +95,8 @@ def is_prime(number):
     if number == 1 or number == 2:
         return True
     else: 
-        for i in range(1, number):
+        for i in range(2, number):
             if number % i == 0:
                 return False
-
-        return True
+    return True
         
