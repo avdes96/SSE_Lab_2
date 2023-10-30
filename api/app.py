@@ -62,6 +62,13 @@ def process_query(entity):
         for num in numbers:
             if is_cube(num) and is_square(num):
                 return str(num)
+    elif entity.startswith(
+        "Which of the following numbers are primes"
+    ):
+        numbers = [int(num) for num in re.findall(r"\d+", entity)]
+        for num in numbers:
+            if is_prime(num):
+                return str(num)
 
     return "Please query for dinosaurs or asteroids!"
 
@@ -81,3 +88,14 @@ def is_cube(number):
 def is_square(number):
     sq_root = round(number ** (1 / 2))
     return sq_root**2 == number
+
+def is_prime(number):
+    if number == 1 or number == 2:
+        return True
+    else: 
+        for i in range(1, number):
+            if number % i == 0:
+                return False
+
+        return True
+        
