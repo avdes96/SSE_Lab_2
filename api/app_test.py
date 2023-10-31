@@ -33,21 +33,25 @@ def test_sq_cube():
     expected = str(4096)
     assert process_query(query) == expected
 
+
 def test_sq_cubes():
     query = "Which of the following numbers is both a square and a cube: 216, \
     4096, 729?"
     expected = str("4096, 729")
     assert process_query(query) == expected
 
+
 def test_minus():
     query = "What is 60 minus 30?"
     expected = str(30)
     assert process_query(query) == expected
 
+
 def test_is_prime():
     query = "Which of the following numbers are primes: 2, 4, 6?"
     expected = str(2)
     assert process_query(query) == expected
+
 
 def test_is_primes():
     query = "Which of the following numbers are primes: 2, 3, 5, 6?"

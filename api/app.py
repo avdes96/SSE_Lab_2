@@ -65,9 +65,7 @@ def process_query(entity):
                 result = result + str(num) + ", "
         return result[:-2]
 
-    elif entity.startswith(
-        "Which of the following numbers are primes"
-    ):
+    elif entity.startswith("Which of the following numbers are primes"):
         numbers = [int(num) for num in re.findall(r"\d+", entity)]
         result = ""
         for num in numbers:
@@ -82,6 +80,13 @@ def process_query(entity):
 def query():
     q = request.args.get("q")
     info = process_query(q)
+    if q == "dinosaurs":
+        return render_template("dinosaurs.html", entity=q, info=info)
+    elif q == "asteroids":
+        return render_template("asteroids.html", entity=q, info=info)
+    elif info == "Please query for dinosaurs or asteroids!":
+        return render_template("others.html", entity=q, info=info)
+
     return info
 
 
@@ -94,12 +99,12 @@ def is_square(number):
     sq_root = round(number ** (1 / 2))
     return sq_root**2 == number
 
+
 def is_prime(number):
     if number == 1 or number == 2:
         return True
-    else: 
+    else:
         for i in range(2, number):
             if number % i == 0:
                 return False
     return True
-        
