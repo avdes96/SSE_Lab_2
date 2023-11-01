@@ -27,7 +27,7 @@ def submit():
     )
 
 
-def process_query(entity):
+def process_query(entity: str) -> str:
     if entity == "dinosaurs":
         return "Dinosaurs ruled the Earth 200 million years ago"
     elif entity == "asteroids":
@@ -59,19 +59,19 @@ def process_query(entity):
         "Which of the following numbers is both a square and a cube:"
     ):
         numbers = [int(num) for num in re.findall(r"\d+", entity)]
-        result = ""
+        output = ""
         for num in numbers:
             if is_cube(num) and is_square(num):
-                result = result + str(num) + ", "
-        return result[:-2]
+                output = output + str(num) + ", "
+        return output[:-2]
 
     elif entity.startswith("Which of the following numbers are primes"):
         numbers = [int(num) for num in re.findall(r"\d+", entity)]
-        result = ""
+        output = ""
         for num in numbers:
             if is_prime(num):
-                result = result + str(num) + ", "
-        return result[:-2]
+                output = output + str(num) + ", "
+        return output[:-2]
 
     return "Please query for dinosaurs or asteroids!"
 
