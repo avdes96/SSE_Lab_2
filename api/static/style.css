@@ -54,17 +54,7 @@ h2, fieldset legend {
     color: turquoise;
 }
 
-/* Box outlining for radio bubutton {
-    cursor: pointer;
-    background-color: #063970;
-    color: white;
-    text-align: center;
-    border-radius: 7px;
-}
-
-button:hover {
-transform: translateY(2px);
-}tton group */
+/* Box outlining for radio button group */
 fieldset {
     border: 2px solid turquoise;
     padding: 10px;
@@ -127,4 +117,32 @@ footer a:hover {
 
 h3 {
     color: #063970;;
+}
+
+table {
+    font-family: Arial, sans-serif;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border: 1px solid #063970;
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #3498DB;
+    text-align: center;
+    border: 1px solid #063970
+}
+  
+tbody tr:nth-child(even) {
+    background-color: #8ab7d4;
+    text-align: center;
+    border: 1px solid #063970
+}
+
+thead {
+    background-color: #063970;
+    color: white;
+    text-align: center;
+    border: 1px solid #063970
 }
