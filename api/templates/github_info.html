@@ -3,17 +3,28 @@
 
 <head>
 <link rel="stylesheet" href="{{ url_for('static', filename='/style.css')}}">
+<script src="{{url_for('static', filename='functions.js')}}"></script>
 <title>GitHub Explorer</title>
 </head>
 
-<body>
+<body onload="generate_table({{ data }})">
     <!-- Banner at the top -->
     <div class="banner">
         <h1>Welcome to the GitHub API explorer</h1>
     </div>
 
     <div class="content">
-        <p>Hello {{ username }}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Updated at</th>
+                    <th>Pushed at</th>
+                </tr>
+            </thead>
+            <tbody id = "table_body" >
+            </tbody>
+        </table>
     </div>
 
     <!-- Footer at the bottom -->

@@ -38,3 +38,24 @@ function random_asteroid_fact() {
     document.getElementById("fact").textContent = output;
 
 }
+
+
+function generate_table(data) {
+
+var tableBody = document.getElementById("table_body");
+
+for (var repo in data) {
+    if (data.hasOwnProperty(repo)) {
+      var entry = data[repo];
+      var updated_at = entry.updated_at;
+      var pushed_at = entry.pushed_at;
+      var row = tableBody.insertRow();
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      cell1.innerHTML = repo;
+      cell2.innerHTML = updated_at;
+      cell3.innerHTML = pushed_at;
+    }
+  }
+}
