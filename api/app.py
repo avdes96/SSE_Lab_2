@@ -50,7 +50,6 @@ def github_submit():
     if response.status_code == 200:
         repos = response.json()
         data = {}
-        repos_and_contributor_data = {}
 
         for repo in repos:
             name = repo["name"]

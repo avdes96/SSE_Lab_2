@@ -28,12 +28,19 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: 3.9
+<<<<<<< HEAD
     - name: Install mypy
       run: pip install mypy
     - name: Install flask
       run: pip install flask
     - name: Install requests
       run: pip install requests
+=======
+    - name: Install dependencies from requirements.txt
+      run: pip install -r requirements.txt
+    - name: Install mypy types for requests
+      run: pip install types-requests
+>>>>>>> e3c13c17fadde762211610919babcad1ae283167
     - name: Run mypy
       run: mypy api/*.py
 
