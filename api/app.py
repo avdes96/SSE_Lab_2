@@ -4,6 +4,7 @@ import requests
 import datetime
 import os
 from openai import OpenAI
+import random
 
 client = OpenAI()
 
@@ -91,13 +92,24 @@ def compliment_page():
 
 @app.route("/chatgpt_get_compliment", methods=["POST"])
 def generate_compliment():
+    compliment_list = ["programming abilities", "smile", "personality", "style", "intellect",
+    "kindness", "wisdom", "ability", "aptitude", "cooking ability", "athelticism","wit",
+    "confidence", "friendliness", "ambition"]
+
+    user_message = "Please give me a compliment relating to my " + random.choice(compliment_list) + "."
+    
+
     response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
-    {"role": "system", "content": "You are a kind individual."},
-    {"role": "user", "content": "Please give me a compliment."}]
+    {"role": "system", "content": "You are a kind individual, who uses beautiful language."},
+    {"role": "user", "content": user_message}],
+    temperature = 0.7
     )
-    compliment = response.choices[0].message.content
+    try:
+        compliment = response.choices[0].message.content
+    except:
+        return "An error has occurred, please try again later."
     return compliment
 
 
