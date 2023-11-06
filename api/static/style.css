@@ -157,7 +157,11 @@ tbody {
     margin: auto;
 }
 
-.footer {
-    position: sticky;
-    bottom: 0;
-  }
+#compliment {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: larger;
+    font-style: italic;
+    color: #063970; 
+}
