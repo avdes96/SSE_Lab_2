@@ -30,7 +30,7 @@ def submit():
 def github_submit():
     input_github_username = request.form.get("username")
     return render_template(
-        "github_input.html"
+        "github_input.html",
         username=input_github_username
     )
 
