@@ -30,8 +30,6 @@ jobs:
         python-version: 3.9
     - name: Install dependencies from requirements.txt
       run: pip install -r requirements.txt
-    - name: Install mypy types for requests
-      run: pip install types-requests
     - name: Run mypy
       run: mypy api/*.py
 
@@ -46,8 +44,6 @@ jobs:
         python-version: 3.9
     - name: Install dependencies from requirements.txt
       run: pip install -r requirements.txt
-    - name: Install mypy types for requests
-      run: pip install types-requests
     - name: Run pytest with coverage
       run: pytest api/*.py  --cov=api
 
