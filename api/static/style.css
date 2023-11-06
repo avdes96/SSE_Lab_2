@@ -121,11 +121,12 @@ h3 {
 
 table {
     font-family: Arial, sans-serif;
-    width: 50%;
     text-align: center;
     margin: auto;
     border: 1px solid #063970;
     border-collapse: collapse;
+    white-space: normal;
+    width: 100%;
 }
 
 tbody tr:nth-child(odd) {
@@ -145,4 +146,8 @@ thead {
     color: white;
     text-align: center;
     border: 1px solid #063970
+}
+
+tbody {
+    margin: 5%;
 }
