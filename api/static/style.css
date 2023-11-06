@@ -151,3 +151,13 @@ thead {
 tbody {
     margin: 5%;
 }
+
+#compliment-button {
+    display: block;
+    margin: auto;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+  }
