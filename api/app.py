@@ -77,6 +77,19 @@ def github_submit():
         data = data
     )
 
+def get_contributors(repo):
+   
+    contributors_url = f"https://api.github.com/repos/{repo}/contributors"
+    response = requests.get(contributors_url)
+    contributor_data = {}
+
+    if response.status_code == 200:
+        contributors = response.json()
+        for contributor in contributors:
+            username = contributor['login']
+            contribution_count = contributor['contributions']
+            contributor_data[username] = contribution_count
+
 def process_query(entity: str) -> str:
     if entity == "dinosaurs":
         return "Dinosaurs ruled the Earth 200 million years ago"
