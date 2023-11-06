@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 import re
 import requests
 import datetime
-import os
 from openai import OpenAI
 import random
 
