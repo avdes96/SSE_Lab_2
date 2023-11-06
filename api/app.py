@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
-import re, requests
+import re
+import requests
+import datetime
 
 
 app = Flask(__name__)
@@ -45,7 +47,7 @@ def github_submit():
             name = repo['name']
             data[name] = {
                 'updated_at': repo['updated_at'],
-                'pushed_at': repo['pushed_at']
+                'pushed_at': repo['pushed_at'],
             }
         print(data)
 
