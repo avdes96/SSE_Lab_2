@@ -74,7 +74,8 @@ for (var repo in data) {
 
 
 function get_compliment() {
-        fetch('/chatgpt_get_compliment', {
+    document.getElementById('compliment').textContent = "Generating your compliment..."    
+    fetch('/chatgpt_get_compliment', {
             method: 'POST'
         })
         .then(response => response.text())

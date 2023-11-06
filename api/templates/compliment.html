@@ -15,13 +15,18 @@
     <br>
 
     <div class="content">
+        <img id ="compliment-image" src="{{ url_for('static', filename='/images/jacob-vizek-ibvHQnpk4LE-unsplash.jpg')}}" alt="Happy balloon image">
         <p id = "compliment"> Click the button below to generate a compliment!
         </p>
         <br>
         <button id = "compliment-button" onclick="get_compliment()">
             Give me a compliment please!
         </button>
+        <br>
+        <div id = "compliment-links">
+            <a href="https://github.com/openai/openai-python" >Created using the OpenAI api and the OpenAI python library</a><br>
+            <a href="https://chat.openai.com/" >Link to ChatGPT webite</a> 
+        </div>
     </div>
 
 </body>
-</html>

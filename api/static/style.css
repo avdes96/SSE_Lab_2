@@ -96,9 +96,14 @@ footer a:hover {
     border: #063970 2px;
 }
 
-#fact-image {
- width: 50%;
+#fact-image, #compliment-image {
+ width: 20%;
  margin-top: 30px;
+}
+
+#compliment-image {
+    display: block;
+    margin: 10px auto;
 }
 
 #fact-content {
@@ -165,3 +170,10 @@ tbody {
     font-style: italic;
     color: #063970; 
 }
+
+#compliment-links {
+    text-align: center;
+    font-style: italic;
+    font-size: small;
+}
+
