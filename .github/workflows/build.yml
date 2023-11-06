@@ -32,8 +32,7 @@ jobs:
       run: pip install -r requirements.txt
     - name: run
       name: Build
-on: [push]
-jobs:
+
   python-formatting:
     runs-on: ubuntu-latest
     steps:
