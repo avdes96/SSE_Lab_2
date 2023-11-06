@@ -17,7 +17,7 @@ jobs:
     - name: Run black
       run: black api/*.py
     - name: Run flake8 (with adjustments to allow for black's formatting)
-      run: flake8 api/*.py --extend-ignore E203, E772 --max-line-length 120
+      run: flake8 api/*.py --extend-ignore E203  --extend-ignore E772 --max-line-length 120
 
   type-checking:
     runs-on: ubuntu-latest
