@@ -26,6 +26,11 @@ def submit():
         donation=input_donation,
     )
 
+@app.route("/github_info")
+def github():
+    return render_template(
+        "github_input.html"
+    )
 
 def process_query(entity: str) -> str:
     if entity == "dinosaurs":
