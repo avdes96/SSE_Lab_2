@@ -7,7 +7,6 @@ import datetime
 app = Flask(__name__)
 
 
-
 @app.route("/")
 def hello_world():
     return render_template("index.html")
@@ -29,26 +28,29 @@ def submit():
         donation=input_donation,
     )
 
+
 @app.route("/github_input", methods=["GET"])
 def github_input():
     return render_template(
         "github_input.html",
     )
 
+
 @app.route("/github_info", methods=["POST"])
 def github_submit():
     input_github_username = request.form.get("username")
 
-    response = requests.get(f"https://api.github.com/users/{input_github_username}/repos")
+    response = requests.get(
+        f"https://api.github.com/users/{input_github_username}/repos"
+    )
     if response.status_code == 200:
         repos = response.json()
         data = {}
         repos_and_contributor_data = {}
-        
+
         for repo in repos:
-            
-            name = repo['name']
-            full_name = repo['full_name']
+            name = repo["name"]
+            full_name = repo["full_name"]
             commits_url = f"https://api.github.com/repos/{full_name}/commits"
             commits_response = requests.get(commits_url)
 
@@ -58,41 +60,24 @@ def github_submit():
                 if commits_data:
                     latest_commit = commits_data[0]
                     latest_commit_data = {
-                        'hash': latest_commit['sha'],
-                        'author': latest_commit['commit']['author']['name'],
-                        'date': format_date(latest_commit['commit']['author']['date']),
-                        'message': latest_commit['commit']['message'],
+                        "hash": latest_commit["sha"],
+                        "author": latest_commit["commit"]["author"]["name"],
+                        "date": format_date(latest_commit["commit"]["author"]["date"]),
+                        "message": latest_commit["commit"]["message"],
                     }
+                
+
 
             data[name] = {
-                'updated_at': format_date(repo['updated_at']),
-                'pushed_at': format_date(repo['pushed_at']),
-                'latest_commit': latest_commit_data
+                "updated_at": format_date(repo["updated_at"]),
+                "pushed_at": format_date(repo["pushed_at"]),
+                "latest_commit": latest_commit_data,
             }
-
-            contributors_url = f"https://api.github.com/repos/{full_name}/contributors"
-            response = requests.get(contributors_url)
-
-            contributor_data = {}
-            if response.status_code == 200:
-                contributors = response.json()
-                for contributor in contributors:
-                    username = contributor['login']
-                    contribution_count = contributor['contributions']
-                    contributor_data[username] = contribution_count
-                repos_and_contributor_data[name] = {
-                    'username': contributor_data['username'],
-                    'contributions': contributor_data['contribution_count']
-                }
-
-        print(data)
-        print(repos_and_contributor_data)
-
+            
     return render_template(
-        "github_info.html",
-        username=input_github_username,
-        data = data
+        "github_info.html", username=input_github_username, data=data
     )
+
 
 def process_query(entity: str) -> str:
     if entity == "dinosaurs":
@@ -180,5 +165,5 @@ def is_prime(number):
 # With help from : https://stackoverflow.com/questions/18795713/parse-and-format-the-date-from-the-github-api-in-python
 def format_date(date_string):
     date = datetime.datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%SZ")
-    date = date.strftime('%a %b %d, %Y at %H:%M GMT')
+    date = date.strftime("%a %b %d, %Y at %H:%M GMT")
     return date
