@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='/style.css')}}">
+<title>GitHub Explorer</title>
+</head>
+
+<body>
+    <!-- Banner at the top -->
+    <div class="banner">
+        <h1>Welcome to the GitHub API explorer</h1>
+    </div>
+
+    <div class="content">
+        <h2>Please enter a username you would like to explor</h2>
+
+
+        <form action="/github_submit" method="post">
+            <label for="namefield">Name:</label>
+            <input type="text" id="usernamefield" name="username" placeholder="Enter username here">
+            <p>
+                <input type="submit" value="Submit!" id = "submit_button">
+            </p>
+        </form>
+    </div>
+
+    <!-- Footer at the bottom -->
+    <div class="footer">
+        <footer>
+            <a href="https://github.com/avdes96/SSE_Lab_2">Visit GitHub Project</a>
+        </footer>
+    </div>
+</body>
+</html>
