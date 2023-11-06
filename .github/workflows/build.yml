@@ -32,6 +32,8 @@ jobs:
       run: pip install mypy
     - name: Install flask
       run: pip install flask
+    - name: Install requests
+      run: pip install requests
     - name: Run mypy
       run: mypy api/*.py
 
@@ -50,6 +52,8 @@ jobs:
       run: pip install pytest-cov
     - name: Install flask
       run: pip install flask
+    - name: Install requests
+      run: pip install requests
     - name: Run pytest with coverage
       run: pytest api/*.py  --cov=api
 
