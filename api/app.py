@@ -26,12 +26,18 @@ def submit():
         donation=input_donation,
     )
 
+@app.route("/github_input", methods=["GET"])
+def github_input():
+    return render_template(
+        "github_input.html",
+    )
+
 @app.route("/github_info", methods=["POST"])
 def github_submit():
     input_github_username = request.form.get("username")
     return render_template(
-        "github_input.html",
-        username=input_github_username
+        "github_info.html",
+        username=input_github_username,
     )
 
 def process_query(entity: str) -> str:
