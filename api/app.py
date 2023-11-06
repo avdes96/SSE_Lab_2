@@ -2,6 +2,10 @@ from flask import Flask, render_template, request
 import re
 import requests
 import datetime
+import os
+from openai import OpenAI
+
+client = OpenAI()
 
 
 app = Flask(__name__)
@@ -77,6 +81,25 @@ def github_submit():
     return render_template(
         "github_info.html", username=input_github_username, data=data
     )
+
+
+@app.route("/chatgpt_compliment_generator", methods=["GET"])
+def compliment_page():
+    return render_template(
+        "compliment.html",
+    )
+
+
+@app.route("/chatgpt_get_compliment", methods=["POST"])
+def generate_compliment():
+    response = client.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=[
+    {"role": "system", "content": "You are a kind individual."},
+    {"role": "user", "content": "Please give me a compliment."}]
+    )
+    compliment = response.choices[0].message.content
+    return compliment
 
 
 def process_query(entity: str) -> str:

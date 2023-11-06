@@ -71,3 +71,14 @@ for (var repo in data) {
     }
   }
 }
+
+
+function get_compliment() {
+        fetch('/chatgpt_get_compliment', {
+            method: 'POST'
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('compliment').textContent = data;
+        });
+}
