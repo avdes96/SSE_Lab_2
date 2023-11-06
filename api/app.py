@@ -43,6 +43,7 @@ def github_submit():
     if response.status_code == 200:
         repos = response.json()
         data = {}
+        repos_and_contributor_data = {}
         
         for repo in repos:
             
@@ -68,27 +69,30 @@ def github_submit():
                 'pushed_at': format_date(repo['pushed_at']),
                 'latest_commit': latest_commit_data
             }
-        
+
+            contributors_url = f"https://api.github.com/repos/{full_name}/contributors"
+            response = requests.get(contributors_url)
+
+            contributor_data = {}
+            if response.status_code == 200:
+                contributors = response.json()
+                for contributor in contributors:
+                    username = contributor['login']
+                    contribution_count = contributor['contributions']
+                    contributor_data[username] = contribution_count
+                repos_and_contributor_data[name] = {
+                    'username': contributor_data['username'],
+                    'contributions': contributor_data['contribution_count']
+                }
+
         print(data)
+        print(repos_and_contributor_data)
 
     return render_template(
         "github_info.html",
         username=input_github_username,
         data = data
     )
-
-def get_contributors(repo):
-   
-    contributors_url = f"https://api.github.com/repos/{repo}/contributors"
-    response = requests.get(contributors_url)
-    contributor_data = {}
-
-    if response.status_code == 200:
-        contributors = response.json()
-        for contributor in contributors:
-            username = contributor['login']
-            contribution_count = contributor['contributions']
-            contributor_data[username] = contribution_count
 
 def process_query(entity: str) -> str:
     if entity == "dinosaurs":
