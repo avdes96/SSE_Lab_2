@@ -46,8 +46,8 @@ def github_submit():
         for repo in repos:
             name = repo['name']
             data[name] = {
-                'updated_at': repo['updated_at'],
-                'pushed_at': repo['pushed_at'],
+                'updated_at': format_date(repo['updated_at']),
+                'pushed_at': format_date(repo['pushed_at']),
             }
         print(data)
 
@@ -138,3 +138,10 @@ def is_prime(number):
             if number % i == 0:
                 return False
     return True
+
+
+# With help from : https://stackoverflow.com/questions/18795713/parse-and-format-the-date-from-the-github-api-in-python
+def format_date(date_string):
+    date = datetime.datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%SZ")
+    date = date.strftime('%a %b %d, %Y at %H:%M GMT')
+    return date
