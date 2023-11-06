@@ -43,12 +43,32 @@ def github_submit():
     if response.status_code == 200:
         repos = response.json()
         data = {}
+        
         for repo in repos:
+            
             name = repo['name']
+            full_name = repo['full_name']
+            commits_url = f"https://api.github.com/repos/{full_name}/commits"
+            commits_response = requests.get(commits_url)
+
+            latest_commit_data = {}
+            if commits_response.status_code == 200:
+                commits_data = commits_response.json()
+                if commits_data:
+                    latest_commit = commits_data[0]
+                    latest_commit_data = {
+                        'hash': latest_commit['sha'],
+                        'author': latest_commit['commit']['author']['name'],
+                        'date': format_date(latest_commit['commit']['author']['date']),
+                        'message': latest_commit['commit']['message'],
+                    }
+
             data[name] = {
                 'updated_at': format_date(repo['updated_at']),
                 'pushed_at': format_date(repo['pushed_at']),
+                'latest_commit': latest_commit_data
             }
+        
         print(data)
 
     return render_template(
