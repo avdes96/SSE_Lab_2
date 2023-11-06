@@ -69,15 +69,13 @@ def github_submit():
                         "date": format_date(latest_commit["commit"]["author"]["date"]),
                         "message": latest_commit["commit"]["message"],
                     }
-                
-
 
             data[name] = {
                 "updated_at": format_date(repo["updated_at"]),
                 "pushed_at": format_date(repo["pushed_at"]),
                 "latest_commit": latest_commit_data,
             }
-            
+
     return render_template(
         "github_info.html", username=input_github_username, data=data
     )
@@ -92,19 +90,40 @@ def compliment_page():
 
 @app.route("/chatgpt_get_compliment", methods=["POST"])
 def generate_compliment():
-    compliment_list = ["programming abilities", "smile", "personality", "style", "intellect",
-    "kindness", "wisdom", "ability", "aptitude", "cooking ability", "athelticism","wit",
-    "confidence", "friendliness", "ambition"]
+    compliment_list = [
+        "programming abilities",
+        "smile",
+        "personality",
+        "style",
+        "intellect",
+        "kindness",
+        "wisdom",
+        "ability",
+        "aptitude",
+        "cooking ability",
+        "athelticism",
+        "wit",
+        "confidence",
+        "friendliness",
+        "ambition",
+    ]
 
-    user_message = "Please give me a compliment relating to my " + random.choice(compliment_list) + "."
-    
+    user_message = (
+        "Please give me a compliment relating to my "
+        + random.choice(compliment_list)
+        + "."
+    )
 
     response = client.chat.completions.create(
-    model="gpt-3.5-turbo",
-    messages=[
-    {"role": "system", "content": "You are a kind individual, who uses beautiful language."},
-    {"role": "user", "content": user_message}],
-    temperature = 0.7
+        model="gpt-3.5-turbo",
+        messages=[
+            {
+                "role": "system",
+                "content": "You are a kind individual, who uses beautiful language.",
+            },
+            {"role": "user", "content": user_message},
+        ],
+        temperature=0.7,
     )
     try:
         compliment = response.choices[0].message.content
