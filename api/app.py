@@ -40,12 +40,19 @@ def github_submit():
     response = requests.get(f"https://api.github.com/users/{input_github_username}/repos")
     if response.status_code == 200:
         repos = response.json()
+        data = {}
         for repo in repos:
-            print(repo["full_name"])
+            name = repo['name']
+            data[name] = {
+                'updated_at': repo['updated_at'],
+                'pushed_at': repo['pushed_at']
+            }
+        print(data)
 
     return render_template(
         "github_info.html",
         username=input_github_username,
+        data = data
     )
 
 def process_query(entity: str) -> str:
