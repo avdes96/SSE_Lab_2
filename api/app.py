@@ -74,9 +74,25 @@ def github_submit():
                 "pushed_at": format_date(repo["pushed_at"]),
                 "latest_commit": latest_commit_data,
             }
+        language_results = {}
+        for repo in repos:
+            repo_name = repo["name"]
+            language_url = f"https://api.github.com/repos/{input_github_username}/{repo_name}/languages"
+            print("hello")
+            language_response = requests.get(language_url)
+            if language_response.status_code == 200:
+               language_data = language_response.json()
+            for key in language_data:
+                try:
+                    language_results[key] += language_data[key]
+                except KeyError:
+                    language_results[key] = language_data[key]
+        
+        language_results = dict(sorted(language_results.items(), key = lambda x: x[1], reverse = True))
+
 
     return render_template(
-        "github_info.html", username=input_github_username, data=data
+        "github_info.html", username=input_github_username, data=data, lang_data = language_results
     )
 
 

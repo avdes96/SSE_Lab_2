@@ -7,13 +7,16 @@
 <title>GitHub Explorer</title>
 </head>
 
-<body onload="generate_table({{ data }})">
+<body onload="generate_table({{ data }}); generate_lang_table({{ lang_data }})">
     <!-- Banner at the top -->
     <div class="banner">
         <h1>Welcome to the GitHub API explorer</h1>
     </div>
+    <br>
+
 
     <div class="content">
+        <h2>List of user repositories</h2>
         <table>
             <thead>
                 <tr>
@@ -31,11 +34,17 @@
         </table>
     </div>
 
-    <!-- Footer at the bottom -->
-    <div class="footer">
-        <footer>
-            <a href="https://github.com/avdes96/SSE_Lab_2">Visit GitHub Project</a>
-        </footer>
+    <div class="content">
+        <h2>List of languages in user's repositories, sorted by total bytes of code</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Number of bytes</th>
+                </tr>
+            </thead>
+            <tbody id = "lang_table_body">
+            </tbody>
+        </table>
     </div>
-</body>
-</html>
+

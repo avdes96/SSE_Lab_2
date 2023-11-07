@@ -72,6 +72,19 @@ for (var repo in data) {
   }
 }
 
+function generate_lang_table(data) {
+
+    var tableBody = document.getElementById("lang_table_body");
+    
+    for (var key in data) {
+        var row = tableBody.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = key;
+        cell2.innerHTML = data[key];
+      }
+    }
+
 
 function get_compliment() {
     document.getElementById('compliment').textContent = "Generating your compliment..."    
