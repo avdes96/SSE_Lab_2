@@ -80,10 +80,11 @@ function get_compliment() {
         })
         .then(response => response.text())
         .then(data => {
-            if (data.startsWith() === "An error occurred with your deployment") {
+            if (data.startsWith() == "An error occurred with your deployment") {
                 data = "ChatGPT took long to respond, please try again!"
             }
             console.log(data)
             document.getElementById('compliment').textContent = data;
         });
 }
+
