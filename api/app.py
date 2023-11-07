@@ -128,6 +128,9 @@ def generate_compliment():
         compliment = response.choices[0].message.content
     except:
         return "An error has occurred, please try again later."
+
+    if compliment == "An error occurred with your deployment FUNCTION_INVOCATION_TIMEOUT":
+        return "Sorry ChatGPT is busy, please try again!"    
     return compliment
 
 
