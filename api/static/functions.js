@@ -80,9 +80,10 @@ function get_compliment() {
         })
         .then(response => response.text())
         .then(data => {
-            if (data == "An error occurred with your deployment FUNCTION_INVOCATION_TIMEOUT ") {
+            if (data == "An error occurred with your deployment FUNCTION_INVOCATION_TIMEOUT") {
                 data = "ChatGPT took long to respond, please try again!"
             }
+            console.log(data)
             document.getElementById('compliment').textContent = data;
         });
 }
