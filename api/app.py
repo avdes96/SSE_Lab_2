@@ -124,7 +124,7 @@ def generate_compliment():
     ]
 
     user_message = (
-        "Please give me a compliment relating to my "
+        "Please give me a one sentence compliment relating to my "
         + random.choice(compliment_list)
         + "."
     )
