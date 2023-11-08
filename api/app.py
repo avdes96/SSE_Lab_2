@@ -247,19 +247,20 @@ def get_joke():
 def fetch_joke(categories):
     try:
 
-        # Blacklist all offensive jokes for coursework
+        # DO NOT DELETE - Blacklist all offensive jokes
         blacklist_flags = "nsfw,religious,political,racist,sexist,explicit"
         base_url = "https://v2.jokeapi.dev/joke"
 
         if "Any" in categories:
-            response = requests.get("https://v2.jokeapi.dev/joke/Any")
+            response = requests.get(f"{base_url}/Any?blacklistFlags={blacklist_flags}")
         else:
-            response = requests.get(f"https://v2.jokeapi.dev/joke/{','.join(categories)}")
+            response = requests.get(f"{base_url}/{','.join(categories)}?blacklistFlags={blacklist_flags}")
+
         if response.status_code == 200:
             joke_data = response.json()
-            if joke_data["type"] == "single":  # If the joke is a single part joke
+            if joke_data["type"] == "single":
                 return joke_data["joke"]
-            else:  # If the joke has a setup and delivery
+            else:
                 return f"{joke_data['setup']} ... {joke_data['delivery']}"
         else:
             return "An error occurred while fetching the joke."
