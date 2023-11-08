@@ -246,6 +246,11 @@ def get_joke():
 
 def fetch_joke(categories):
     try:
+
+        # Blacklist all offensive jokes for coursework
+        blacklist_flags = "nsfw,religious,political,racist,sexist,explicit"
+        base_url = "https://v2.jokeapi.dev/joke"
+
         if "Any" in categories:
             response = requests.get("https://v2.jokeapi.dev/joke/Any")
         else:
