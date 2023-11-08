@@ -232,6 +232,34 @@ def is_prime(number):
                 return False
     return True
 
+@app.route("/jokes", methods=["GET"])
+def jokes_page():
+    return render_template("joke.html")
+
+@app.route("/get_joke", methods=["POST"])
+def get_joke():
+    categories = request.form.getlist('joke-type')
+    if not categories:
+        categories = ["Any"]
+    joke = fetch_joke(categories)
+    return joke
+
+def fetch_joke(categories):
+    try:
+        if "Any" in categories:
+            response = requests.get("https://v2.jokeapi.dev/joke/Any")
+        else:
+            response = requests.get(f"https://v2.jokeapi.dev/joke/{','.join(categories)}")
+        if response.status_code == 200:
+            joke_data = response.json()
+            if joke_data["type"] == "single":  # If the joke is a single part joke
+                return joke_data["joke"]
+            else:  # If the joke has a setup and delivery
+                return f"{joke_data['setup']} ... {joke_data['delivery']}"
+        else:
+            return "An error occurred while fetching the joke."
+    except Exception as e:
+        return str(e)
 
 # With help from : https://stackoverflow.com/questions/18795713/parse-and-format-the-date-from-the-github-api-in-python
 def format_date(date_string):
