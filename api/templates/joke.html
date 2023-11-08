@@ -13,10 +13,8 @@
     <br>
 
     <div class="content">
-        <!-- Removed the image according to the new plan -->
         <p id="joke-text">Select the type of joke and click the button below to generate a joke!</p>
         <br>
-        <!-- Added method="POST" and action to form, which will be handled by Flask -->
         <form id="joke-form" method="POST" action="{{ url_for('get_joke') }}">
             <label><input type="checkbox" name="joke-type" value="Programming"> Programming</label><br>
             <label><input type="checkbox" name="joke-type" value="Miscellaneous"> Miscellaneous</label><br>
@@ -24,7 +22,6 @@
             <label><input type="checkbox" name="joke-type" value="Pun"> Pun</label><br>
             <label><input type="checkbox" name="joke-type" value="Spooky"> Spooky</label><br>
             <label><input type="checkbox" name="joke-type" value="Christmas"> Christmas</label><br>
-            <!-- Changed button type to "submit" -->
             <button type="submit" id="joke-button">Make me laugh!</button>
         </form>
         <br>
