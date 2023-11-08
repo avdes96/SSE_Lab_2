@@ -177,3 +177,6 @@ tbody {
     font-size: small;
 }
 
+#hint {
+    font-style: italic;
+}
