@@ -242,7 +242,7 @@ def get_joke():
     if not categories:
         categories = ["Any"]
     joke = fetch_joke(categories)
-    return joke
+    return render_template("display_joke.html", joke=joke)
 
 def fetch_joke(categories):
     try:

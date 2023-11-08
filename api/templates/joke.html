@@ -2,9 +2,8 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<script src="{{ url_for('static', filename='functions.js') }}"></script>
-<title>JokeAPI Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>JokeAPI Example</title>
 </head>
 
 <body>
@@ -14,23 +13,24 @@
     <br>
 
     <div class="content">
-        <img id="joke-image" src="{{ url_for('static', filename='images/laugh.jpg') }}" alt="Laughing image">
-        <p id="joke-text">Select the type of joke and click the button below to generate a joke!
-        </p>
+        <!-- Removed the image according to the new plan -->
+        <p id="joke-text">Select the type of joke and click the button below to generate a joke!</p>
         <br>
-        <form id="joke-form">
+        <!-- Added method="POST" and action to form, which will be handled by Flask -->
+        <form id="joke-form" method="POST" action="{{ url_for('get_joke') }}">
             <label><input type="checkbox" name="joke-type" value="Programming"> Programming</label><br>
             <label><input type="checkbox" name="joke-type" value="Miscellaneous"> Miscellaneous</label><br>
             <label><input type="checkbox" name="joke-type" value="Dark"> Dark</label><br>
             <label><input type="checkbox" name="joke-type" value="Pun"> Pun</label><br>
             <label><input type="checkbox" name="joke-type" value="Spooky"> Spooky</label><br>
             <label><input type="checkbox" name="joke-type" value="Christmas"> Christmas</label><br>
-            <button type="button" id="joke-button" onclick="get_joke()">Make me laugh!</button>
+            <!-- Changed button type to "submit" -->
+            <button type="submit" id="joke-button">Make me laugh!</button>
         </form>
         <br>
         <div id="joke-links">
-            <p>Random jokes are fetched from the JokeAPI and displayed here.</p>
-            <p>Remember to select at least one type of joke before clicking the button.</p>
+            <p>Random jokes are fetched from the JokeAPI and displayed on a new page.</p>
+            <p>Remember to select at least one type of joke before submitting.</p>
             <p>If you don't select any, a random type will be chosen for you!</p><br>
             <a href="https://sv443.net/jokeapi/v2/" >Link to JokeAPI documentation</a>
         </div>
@@ -38,4 +38,3 @@
 
 </body>
 </html>
-
