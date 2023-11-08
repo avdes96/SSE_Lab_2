@@ -96,6 +96,9 @@ function get_compliment() {
             if (data.startsWith("An error occurred")) {
                 data = "ChatGPT took long to respond, please try again!"
             }
+            else if (data.includes("Internal Server Error")) {
+                data = "You've exceeded the limit for compliment requests - please wait a bit and try again!"
+            }
             console.log(data)
             document.getElementById('compliment').textContent = data;
         });
